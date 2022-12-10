@@ -1,0 +1,25 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>顧客データ</h1>
+
+<table class="table table-hover table-striped table-bordered">
+  <thead class="table-dark">
+    <th>顧客ID</th>
+    <th>氏名</th>
+    <th>年齢</th>
+    <th>メールアドレス</th>
+    <th>詳細</th>
+  </thead>
+
+  <tbody>
+    <div id="customers">
+      <% @customers.each do |customer| %>
+      <%= render customer %>
+      <% end %>
+    </div>
+  </tbody>
+</table>
+
+<!--
+<%= link_to "New customer", new_customer_path %>
+-->
