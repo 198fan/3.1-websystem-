@@ -1,0 +1,29 @@
+<div id="<%= dom_id order %>">
+  <tr>
+  <td>
+    <strong><%= order.order_id %></strong>
+  </td>
+  
+  <td>
+    <%= order.store_id %>
+  </td>
+
+  <td>
+    <%= order.customer_id %>
+  </td>
+
+  <td>
+    <%= order.money %>円
+  </td>
+
+  <td>
+    <%= order.transdate %>
+  </td>
+
+  <td>
+    <%= link_to "詳細", order %>
+  </td>
+  </tr>
+
+</div>
+

@@ -4,5 +4,8 @@ class HomeController < ApplicationController
 
   def user
   end
+
+  def dataview
+  end
   
 end

@@ -1,0 +1,22 @@
+
+<h1>注文</h1>
+
+
+<table class="table table-hover table-striped table-bordered">
+  <thead class="table-dark">
+    <th>注文ID</th>
+    <th>店舗ID</th>
+    <th>顧客ID</th>
+    <th>金額</th>
+    <th>日付</th>
+    <th>詳細</th>
+  </thead>
+
+  <tbody>
+    <div id="orders">
+      <% @orders.each do |order| %>
+      <%= render order %>
+      <% end %>
+    </div>
+  </tbody>
+</table>

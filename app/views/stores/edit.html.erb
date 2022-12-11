@@ -1,0 +1,15 @@
+<h1>店舗データ更新</h1>
+<br>
+
+<%= render "form", store: @store %>
+
+<br>
+
+<div style="margin: auto;text-align: right;">
+  <div style="margin-left:auto;margin-right: 0;display: inline-block;">
+    <%= link_to "表示", @store, class:"btn btn-secondary" %>
+  </div>
+  <div style="margin-left:0;margin-right: auto;display: inline-block;">
+    <%= link_to "戻る", stores_path, class:"btn btn-secondary" %>
+  </div>
+</div>

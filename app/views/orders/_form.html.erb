@@ -1,0 +1,44 @@
+<%= form_with(model: order) do |form| %>
+  <% if order.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+        <% order.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+    
+    <%= form.number_field :order_id, class:"form-control", placeholder:"注文ID" %>
+  </div>
+
+  <div class="mb-3">
+    
+    <%= form.number_field :store_id, class:"form-control", placeholder:"店舗ID" %>
+  </div>
+
+  <div class="mb-3">
+    
+    <%= form.number_field :customer_id, class:"form-control", placeholder:"顧客ID" %>
+  </div>
+
+  <div class="mb-3">
+    
+    <%= form.number_field :money, class:"form-control", placeholder:"金額" %>
+  </div>
+
+  <div class="mb-3">
+    
+    <%= form.date_field :transdate, class:"form-control", placeholder:"日付" %>
+  </div>
+
+
+
+  <div>
+    <%= form.submit "登録", class:"btn btn-dark" %>
+  </div>
+<% end %>

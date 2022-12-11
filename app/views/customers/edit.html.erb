@@ -1,10 +1,15 @@
-<h1>Editing customer</h1>
+<h1>顧客データ更新</h1>
+<br>
 
 <%= render "form", customer: @customer %>
 
 <br>
 
-<div>
-  <%= link_to "Show this customer", @customer %> |
-  <%= link_to "Back to customers", customers_path %>
+<div style="margin: auto;text-align: right;">
+  <div style="margin-left:auto;margin-right: 0;display: inline-block;">
+    <%= link_to "表示", @customer, class:"btn btn-secondary" %>
+  </div>
+  <div style="margin-left:0;margin-right: auto;display: inline-block;">
+    <%= link_to "戻る", customers_path, class:"btn btn-secondary" %>
+  </div>
 </div>
