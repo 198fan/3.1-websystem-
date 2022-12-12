@@ -1,4 +1,5 @@
 <%= javascript_include_tag "http://www.google.com/jsapi", "chartkick" %>
+
 <div style:"margin:auto; text-alignment:center">
-<%= line_chart Order.group_by_day(:transdate).sum(:money), width: "1200px", height: "600px" %>
+<%= line_chart Order.group_by_day(:transdate).sum(:money), width: "1200px", height: "600px", xtitle: "日付", ytitle: "売上" %>
 </div>
