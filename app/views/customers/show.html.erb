@@ -5,6 +5,24 @@
   <p class="lead">
     年齢: <%= @customer.age %> <br>
     メールアドレス: <%= @customer.email %>
+
+    <table class="table table-hover table-striped table-bordered">
+      <thead class="table-dark">
+        <th>注文ID</th>
+        <th>店舗ID</th>
+        <th>顧客ID</th>
+        <th>金額</th>
+        <th>日付</th>
+        <th>詳細</th>
+      </thead>
+      <tbody>
+        <div id="orders">
+          <% Order.where(customer_id: @customer.custid).each do |order| %>
+          <%= render order %>
+          <% end %>
+        </div>
+      </tbody>
+    </table>
   </p>
   <p class="lead">
     <div style="margin-left:auto;margin-right: 0;display: inline-block;">
