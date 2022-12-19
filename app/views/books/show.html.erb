@@ -1,0 +1,27 @@
+<div class="jumbotron jumbotron-fluid">
+  <h1 class="display-4"><%= @book.title %></h1>
+  <p class="lead">
+    <p>
+    <% if @book.image.attached? %>
+    <%= image_tag(@book.image, style:"width:150px; height:200px; display:inline-block") %>
+    <% end %>
+    </p>
+    ISBN: <%= @book.isbn %> <br>
+    著者: <%= @book.author %> <br>
+    出版社: <%= @book.pubcom %> <br>
+    価格:  <%= @book.price %>
+  </p>
+  <p class="lead">
+    <div style="margin-left:auto;margin-right: 0;display: inline-block;">
+    <%= link_to "更新", edit_book_path(@book), class:"btn btn-dark"%>
+    </div>
+    <div style="margin-left:0;margin-right: auto;display: inline-block;">
+    <%= button_to "削除", @book, method: :delete, class:"btn btn-danger" %>
+    </div>
+  </p>
+  <hr class="my-4">
+</div>
+
+<div style="margin: auto;text-align: right;">
+  <%= link_to "戻る", books_path, class:"btn btn-secondary" %>
+</div>

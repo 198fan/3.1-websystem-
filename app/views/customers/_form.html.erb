@@ -28,12 +28,17 @@
 
   <div class="mb-3">
 
+    <%= form.text_field :gender, class:"form-control", placeholder:"性別" %>
+  </div>
+
+  <div class="mb-3">
+
     <%= form.text_field :email, class:"form-control", placeholder:"メールアドレス" %>
   </div>
 
   <div class="mb-3">
 
-    <%= form.text_field :pass, class:"form-control", placeholder:"パスワード" %>
+    <%= form.password_field :pass, class:"form-control", placeholder:"パスワード" %>
   </div>
 
   <div>

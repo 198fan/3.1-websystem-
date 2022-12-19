@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :questionnaires
+  resources :orderdetails
+  resources :storages
+  resources :books
   resources :orders
   resources :stores
   devise_for :users

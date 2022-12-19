@@ -37,6 +37,32 @@
               <%= link_to 'データ登録', new_store_path, class:"dropdown-item" %>
           </ul>
         </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle px-3" id="storedrop"href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            書籍
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <%= link_to 'データ表示', books_path, class:"dropdown-item" %>
+            </li>
+            <li>
+              <%= link_to 'データ登録', new_book_path, class:"dropdown-item" %>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle px-3" id="storedrop"href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            在庫
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <%= link_to 'データ表示', storages_path, class:"dropdown-item" %>
+            </li>
+            <li>
+              <%= link_to 'データ登録', new_storage_path, class:"dropdown-item" %>
+          </ul>
+        </li>
         
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle px-3" id="custdrop" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -48,6 +74,9 @@
             </li>
             <li>
               <%= link_to 'データ登録', new_order_path, class:"dropdown-item" %>
+            <li><hr class="dropdown-divider"></li>
+            <li><%= link_to '注文明細', orderdetails_path, class:"dropdown-item" %></li>
+            <li><%= link_to '注文明細登録', new_orderdetail_path, class:"dropdown-item" %></li>
             <li><hr class="dropdown-divider"></li>
             <li><%= link_to '可視化', home_dataview_path, class:"dropdown-item" %></li>
           </ul>

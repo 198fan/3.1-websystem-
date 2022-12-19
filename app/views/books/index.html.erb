@@ -1,0 +1,21 @@
+<h1>書籍</h1>
+
+<table class="table table-hover table-striped table-bordered">
+  <thead class="table-dark">
+    <th>情報</th>
+    <th>画像</th>
+    <th>詳細</th>
+  </thead>
+
+  <tbody>
+    <div id="books">
+      <% @books.each do |book| %>
+      <%= render book %>
+      <% end %>
+    </div>
+  </tbody>
+</table>
+<!--
+
+<%= link_to "New book", new_book_path %>
+-->

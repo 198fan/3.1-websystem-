@@ -1,0 +1,21 @@
+<div class="jumbotron jumbotron-fluid">
+  <h1 class="display-4">ISBN: <%= @storage.books_id %><br>店舗ID: <%= @storage.stores_id %></h1>
+  <p class="lead">
+    在庫数: <%= @storage.stornum %> <br>
+    ブロック: <%= @storage.block %>
+  </p>
+  <p class="lead">
+    <div style="margin-left:auto;margin-right: 0;display: inline-block;">
+    <%= link_to "更新", edit_storage_path(@storage), class:"btn btn-dark"%>
+    </div>
+    <div style="margin-left:0;margin-right: auto;display: inline-block;">
+    <%= button_to "削除", @storage, method: :delete, class:"btn btn-danger" %>
+    </div>
+  </p>
+  <hr class="my-4">
+</div>
+
+<div style="margin: auto;text-align: right;">
+  <%= link_to "戻る", storages_path, class:"btn btn-secondary" %>
+</div>
+

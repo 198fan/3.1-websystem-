@@ -7,3 +7,5 @@ import "chartkick/chart.js"
 
 //= require Chart.bundle
 //= require chartkick
+import "trix"
+import "@rails/actiontext"

@@ -1,0 +1,41 @@
+<div id="<%= dom_id book %>">
+  <tr>
+  <td>
+    <p>
+    <strong>ISBN:</strong>
+    <%= book.isbn %>
+    </p>
+    <p>
+    <strong>タイトル:</strong>
+    <%= book.title %>
+    </p>
+    <p>
+    <strong>著者:</strong>
+    <%= book.author %>
+    </p>
+    <p>
+    <strong>出版社:</strong>
+    <%= book.pubcom %>
+    </p>
+    <p>
+    <strong>価格:</strong>
+    <%= book.price %>
+    </p>
+  </td>
+
+  <td>
+    <p>
+    <% if book.image.attached? %>
+    <%= image_tag(book.image, style:"width:150px; height:200px; display:inline-block") %>
+    <% end %>
+  </p>
+  </td>
+
+
+  <td>
+    <%= link_to "詳細", book %>
+  </td>
+  </tr>
+
+
+</div>

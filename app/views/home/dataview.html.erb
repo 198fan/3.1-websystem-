@@ -1,5 +1,19 @@
 <%= javascript_include_tag "http://www.google.com/jsapi", "chartkick" %>
 
-<div style:"margin:auto; text-alignment:center">
-<%= line_chart Order.group_by_day(:transdate).sum(:money), width: "1200px", height: "600px", xtitle: "日付", ytitle: "売上" %>
+<div class="card">
+  <div class="card-body">
+    <div style:"margin:auto; text-alignment:center">
+<%= line_chart Order.group_by_day(:transdate).sum(:money), width: "1000px", height: "600px", xtitle: "日付", ytitle: "売上" %>
+</div>
+  </div>
+</div>
+
+<br>
+
+<div class="card">
+  <div class="card-body">
+    <div style:"margin:auto; text-alignment:center">
+<%= line_chart Order.group_by_day(:transdate).count(:order_id), width: "1000px", height: "600px", xtitle: "日付", ytitle: "注文数" %>
+</div>
+  </div>
 </div>
